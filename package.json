@@ -1,0 +1,18 @@
+{
+  "name": "esy-bullet-ocaml",
+  "version": "0.1.0",
+  "description": "OCaml bindings for the Bullet physics engine",
+  "license": "MIT",
+  "esy": {
+    "build": [],
+    "buildsInSource": "_build"
+  },
+  "peerDependencies": {
+    "ocaml": "~4.6.0"
+  },
+  "devDependencies": {
+    "ocaml": "~4.6.0"
+  }, 
+  "dependencies": {
+  }
+}
