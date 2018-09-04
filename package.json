@@ -10,12 +10,9 @@
     "buildsInSource": "_build"
   },
   "devDependencies": {
-    "@bryphe/ocaml": "*"
+    "ocaml": "~4.6.0"
   }, 
-  "resolutions": {
-    "@bryphe/ocaml": "github:bryphe/ocaml#1148fdf"
-  },
   "dependencies": {
-    "@bryphe/ocaml": "*"
+    "ocaml": "~4.6.0"
   }
 }
