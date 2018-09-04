@@ -9,12 +9,13 @@
     ],
     "buildsInSource": "_build"
   },
-  "peerDependencies": {
-    "ocaml": "~4.6.0"
-  },
   "devDependencies": {
-    "ocaml": "~4.6.0"
+    "@bryphe/ocaml": "*"
   }, 
+  "resolutions": {
+    "@bryphe/ocaml": "github:bryphe/ocaml#1148fdf"
+  },
   "dependencies": {
+    "@bryphe/ocaml": "*"
   }
 }

@@ -1,18 +1,7 @@
 {
-  "hash": "86456a8270f01b0e6e80f18bf8a14167",
+  "hash": "b70c961ee168f16ea827361508f93a57",
   "root": "esy-bullet-ocaml@path:.",
   "node": {
-    "ocaml@4.6.5": {
-      "record": {
-        "name": "ocaml",
-        "version": "4.6.5",
-        "source":
-          "archive:https://registry.npmjs.org/ocaml/-/ocaml-4.6.5.tgz#sha1:23b6d4dc36437f431c427953a5236447e7b51368",
-        "files": [],
-        "opam": null
-      },
-      "dependencies": []
-    },
     "esy-bullet-ocaml@path:.": {
       "record": {
         "name": "esy-bullet-ocaml",
@@ -21,7 +10,17 @@
         "files": [],
         "opam": null
       },
-      "dependencies": [ "ocaml@4.6.5" ]
+      "dependencies": [ "@bryphe/ocaml@github:bryphe/ocaml#1148fdf" ]
+    },
+    "@bryphe/ocaml@github:bryphe/ocaml#1148fdf": {
+      "record": {
+        "name": "@bryphe/ocaml",
+        "version": "github:bryphe/ocaml#1148fdf",
+        "source": "github:bryphe/ocaml#1148fdf",
+        "files": [],
+        "opam": null
+      },
+      "dependencies": []
     }
   }
 }
