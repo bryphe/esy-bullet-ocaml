@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 #include <caml/mlvalues.h>
-#include "LinearMath/btVector3.h"
-#include "BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.h"
+#include "btBulletDynamicsCommon.h"
 
 extern "C" {
 
@@ -10,17 +9,16 @@ extern "C" {
     bulletCreateDynamicsWorld(value unit)
     {
         btDefaultCollisionConfiguration* collisionConfiguration = new btDefaultCollisionConfiguration();
-        /* btCollisionDispatcher* dispatcher = new btCollisionDispatcher(collisionConfiguration); */
-        /* btBroadphaseInterface* overlappingPairCache = new btDbvtBroadphase(); */
-        /* btSequentialImpulseConstraintSolver* solver = new btSequentialImpulseConstraintSolver; */
-        /* btDiscreteDynamicsWorld* dynamicsWorld = new btDiscreteDynamicsWorld(dispatcher, overlappingPairCache, solver, collisionConfiguration); */
+        btCollisionDispatcher* dispatcher = new btCollisionDispatcher(collisionConfiguration);
+        btBroadphaseInterface* overlappingPairCache = new btDbvtBroadphase();
+        btSequentialImpulseConstraintSolver* solver = new btSequentialImpulseConstraintSolver;
+        btDiscreteDynamicsWorld* dynamicsWorld = new btDiscreteDynamicsWorld(dispatcher, overlappingPairCache, solver, collisionConfiguration);
 
-        /* dynamicsWorld->setGravity(btVector3(0, -10, 0)); */
+        dynamicsWorld->setGravity(btVector3(0, -10, 0));
 
         printf("Created world!\n");
-        return Val_unit;
 
-        /* return (value)dynamicsWorld; */
+        return (value)dynamicsWorld;
     }
 
     CAMLprim value
