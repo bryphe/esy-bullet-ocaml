@@ -4,7 +4,9 @@
   "description": "OCaml bindings for the Bullet physics engine",
   "license": "MIT",
   "esy": {
-    "build": [],
+    "build": [
+        ["make", "build"]
+    ],
     "buildsInSource": "_build"
   },
   "peerDependencies": {
